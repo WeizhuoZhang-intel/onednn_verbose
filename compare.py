@@ -92,8 +92,10 @@ if __name__ == '__main__':
     parser.add_argument('--show', '-s', choices=['all', 'better', 'worse'], action='store', default='all')
     args = parser.parse_args()
 
-    label_a, file_a = args.file[0].split(':')
-    label_b, file_b = args.file[1].split(':')
+    label_a, file_a = args.file[0][0].split(':')
+    label_b, file_b = args.file[1][0].split(':')
+    print(label_a, file_a)
+    print(label_b, file_b)
     events_a = parse_file(file_a, args.delimiter)
     events_b = parse_file(file_b, args.delimiter)
 

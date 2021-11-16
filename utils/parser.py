@@ -18,7 +18,7 @@ def extract_label_file(args):
 
 
 def parse_event(line):
-    if line.startswith('dnnl_verbose'):
+    if line.startswith('onednn_verbose'):
         m = line.split(',')
         if len(m) == 11:
             return {
