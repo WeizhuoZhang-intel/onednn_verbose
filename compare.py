@@ -21,6 +21,8 @@ def compare_single_op(label_a, events_a, label_b, events_b, thresh=1.5, show='al
     len_a = len(events_a)
     len_b = len(events_b)
     if len_a != len_b or len_a == 0 or len_b == 0:
+        print('len_a: ', len_a)
+        print('len_b: ', len_b)
         print('Skipped')
         return
 
